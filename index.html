@@ -27,22 +27,34 @@
     .container {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;  /* Aumentei o espaçamento entre as caixas */
       margin-top: 20px;
     }
     .data-box {
       background: white;
       border-radius: 10px;
-      padding: 20px;
+      padding: 30px;  /* Aumentei o padding interno */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 150px;
+      width: 220px;  /* Largura aumentada */
+      min-height: 180px;  /* Altura mínima garantida */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .data-box h2 {
+      margin: 0 0 15px 0;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     h1 {
       color: #333;
       margin-bottom: 10px;
     }
     #temp, #umid {
-      font-size: 24px;
+      font-size: 28px;  /* Tamanho aumentado */
       font-weight: bold;
       margin: 10px 0;
     }
@@ -51,11 +63,11 @@
     .update-time {
       background-color: #2c3e50;
       color: white;
-      padding: 8px 15px;
+      padding: 10px 20px;  /* Padding aumentado */
       border-radius: 20px;
       display: inline-block;
-      margin: 25px auto 15px;
-      font-size: 14px;
+      margin: 30px auto 20px;  /* Margem aumentada */
+      font-size: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .footer {
@@ -75,11 +87,11 @@
 
   <div class="container">
     <div class="data-box">
-      <h2>🌡️ Temperatura</h2>
+      <h2><span>🌡️</span> Temperatura</h2>
       <p id="temp">-- °C</p>
     </div>
     <div class="data-box">
-      <h2>💧 Umidade</h2>
+      <h2><span>💧</span> Umidade</h2>
       <p id="umid">-- %</p>
     </div>
   </div>
@@ -89,7 +101,7 @@
   </div>
 
   <div class="footer">
-    Projeto de Atividade extencionista - UNINTER
+    Projeto de Atividades Extencionistas - UNINTER
   </div>
 
   <script>
@@ -128,7 +140,7 @@
     }
 
     // Atualiza a cada 30 segundos
-    setInterval(updateData, 300000);
+    setInterval(updateData, 30000);
     updateData(); // Chama imediatamente ao carregar
   </script>
 </body>
