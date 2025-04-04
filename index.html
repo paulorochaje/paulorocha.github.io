@@ -106,8 +106,8 @@
 
   <script>
     // Configurações do JSONBin.io
-    const jsonbinUrl = "https://api.jsonbin.io/v3/b/67eaa41a8a456b79667ffc94/latest";
-    const apiKey = "$2a$10$KvXHog8/pzg2izONfB9vT.MjZ3GhuHhyPufkRqpCpEJt5oh2/vUtW";
+    const jsonbinUrl = "https://api.jsonbin.io/v3/b/67efcab68a456b7966826057";
+    const apiKey = "$2a$10$NgTwFsAV/3LYN1.nHETyLebTE5B8tSU4szTWR4cC7pdptoVLfoVte";
 
     function updateData() {
       fetch(jsonbinUrl, {
@@ -139,8 +139,8 @@
         });
     }
 
-    // Atualiza a cada 30 segundos
-    setInterval(updateData, 30000);
+    // Atualiza a cada 1 hora
+    setInterval(updateData, 10000);
     updateData(); // Chama imediatamente ao carregar
   </script>
 </body>
